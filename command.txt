@@ -1,0 +1,10 @@
+For LLIE
+    Using LZWL
+        python neuralsfc/train.py --cfg configs/IR/LowLight/LOL_lzwl.yml
+    Using NAC
+        python neuralsfc/train.py --cfg configs/IR/LowLight/LOL_ac.yml
+For Deblurring
+    Using LZWL
+        python neuralsfc/train.py --cfg configs/IR/LowLight/LOL_lzwl.yml
+    Using NAC
+        python neuralsfc/train.py --cfg configs/IR/LowLight/LOL_ac.yml

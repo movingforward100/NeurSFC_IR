@@ -1,0 +1,34 @@
+data_dir: 'dataset/LOLv1'
+dataset: 'LOLv1'
+e_class: 'nac' # Using negative autocorrelation evaluator
+
+
+gpu: '0'
+n_workers: 8
+benchmark: True
+
+n_channels: 3 # number of channels of input images
+
+g_loss_type: 'direct'
+weight_norm: 'in'
+residual: False
+
+lr_e: !!float 1e-3
+lr_g: !!float 2e-4
+
+
+max_grad_norm_e: 100000.0
+max_grad_norm_g: 100000.0
+ac_offset: 6
+
+
+batch_size: 32 # total: 782*64
+val_batch_size: 32
+
+output_folder: 'LOLv1_ac'
+
+large_wg: 'res_gat'
+
+scheduler_mode: 'step'
+scheduler: 'cosine'
+warmup: 0.1

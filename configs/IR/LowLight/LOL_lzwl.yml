@@ -1,0 +1,50 @@
+data_dir: 'dataset/LOLv1'
+dataset: 'LOLv1'
+e_class: 'lzwl' # Using/ negative autocorrelation evaluator
+
+
+gpu: '0'
+n_workers: 8
+benchmark: True
+
+n_channels: 3 # number of channels of input images
+
+g_loss_type: 'direct'
+weight_norm: 'in'
+residual: False
+
+lr_e: !!float 1e-3
+lr_g: !!float 5e-5
+
+
+max_grad_norm_e: 100000.0
+max_grad_norm_g: 100000.0
+ac_offset: 1
+
+
+batch_size: 32 # total: 782*64
+val_batch_size: 32
+
+output_folder: 'LOLv1_LZWL'
+
+large_wg: 'res_gat'
+
+scheduler_mode: 'step'
+scheduler: 'cosine'
+warmup: 0.1
+
+
+print_interval: 10
+val_step_interval: -1 # no in-epoach validation
+only_save_best: True
+
+show_lzw: True
+show_more_acs: False
+only_avg_loss: False
+
+
+n_epochs: 200
+normalize_e: True
+normalize_lo: 800
+normalize_hi: 2800
+#count=7275  min=91.0  p5=947.0  median=1976.0  p95=2649.0  max=3417.0
