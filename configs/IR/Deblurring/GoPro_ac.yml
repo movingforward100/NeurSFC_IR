@@ -1,0 +1,36 @@
+data_dir: 'dataset/GoPro'
+dataset: 'GoPro'
+e_class: 'nac' # Using negative autocorrelation evaluator
+
+
+gpu: '0'
+n_workers: 8
+benchmark: True
+
+n_channels: 3 # number of channels of input images
+
+g_loss_type: 'direct'
+weight_norm: 'in'
+residual: False
+
+lr_e: !!float 1e-3
+lr_g: !!float 2e-4
+
+
+max_grad_norm_e: 100000.0
+max_grad_norm_g: 100000.0
+ac_offset: 6
+
+batch_size: 48 # 
+val_batch_size: 48  # should be equal to batch_size
+
+output_folder: 'Gopro_ac'
+
+large_wg: 'res_gat'
+
+print_interval: 200
+n_epochs: 20
+lr_decay: 0.95
+
+
+# n_embeddings: 256
