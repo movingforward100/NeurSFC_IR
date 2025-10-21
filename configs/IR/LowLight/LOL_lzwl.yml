@@ -14,7 +14,7 @@ weight_norm: 'in'
 residual: False
 
 lr_e: !!float 1e-3
-lr_g: !!float 5e-5
+lr_g: !!float 2e-4
 
 
 max_grad_norm_e: 100000.0
@@ -22,19 +22,14 @@ max_grad_norm_g: 100000.0
 ac_offset: 1
 
 
-batch_size: 32 # total: 782*64
-val_batch_size: 32
+batch_size: 48 # total: 782*64
+val_batch_size: 48
 
 output_folder: 'LOLv1_LZWL'
 
 large_wg: 'res_gat'
 
-scheduler_mode: 'step'
-scheduler: 'cosine'
-warmup: 0.1
-
-
-print_interval: 10
+print_interval: 50
 val_step_interval: -1 # no in-epoach validation
 only_save_best: True
 
@@ -43,7 +38,8 @@ show_more_acs: False
 only_avg_loss: False
 
 
-n_epochs: 200
+n_epochs: 50
+lr_decay: 0.97
 normalize_e: True
 normalize_lo: 800
 normalize_hi: 2800

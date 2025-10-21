@@ -29,6 +29,5 @@ output_folder: 'LOLv1_ac'
 
 large_wg: 'res_gat'
 
-scheduler_mode: 'step'
-scheduler: 'cosine'
-warmup: 0.1
+n_epochs: 50
+lr_decay: 0.97
