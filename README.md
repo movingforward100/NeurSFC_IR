@@ -41,11 +41,16 @@ Tasks:
 
 ### Step 2: Pre-processing
 
-- Calculate centroids: 
+- Calculate centroids:
+  
       - crop training images: run python preprocessing/crop.py;
+  
       - centroids calculation: run python preprocessing/cal_centroid.py
+  
 - Set normalize_lo and normalize_hi for configuration file (necessary when e_class = 'lzwl')
+
       - run python preprocessing/cal_p5_p95.py --cfg configs/IR/xxx/xxx.yml
+  
       - set normalize_lo and normalize_hi in configs/IR/xxx/xxx.yml; 
 
 - Please note normalize_lo should be slightly lower than p5 and normalize_hi should be slightly higher than p95. I have done this part for GoPro and LOLv1 datasets.
@@ -59,6 +64,7 @@ To Terry: I need you to check:
 - check data.py， model.py, and train.py under neuralsfc folder? Please note my plan is to do validations on test subset. In model.py, this version aims to work equally to the original repo.
 - check utils/lzw.py. I did some changes here.
 - run each .yml for several epoches (e.g., 3 epoches) to check if the output is as expected. 
+
 
 
 
