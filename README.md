@@ -1,6 +1,6 @@
 # Neural Space-filling Curves for Image  Restoration Tasks
 
-Please refer to the official pytorch implementation (NSeurFC, ECCV 2022) for conda env development.
+Please refer to the official pytorch implementation (NeurSFC, ECCV 2022) for conda env development.
 
 ## Requirements
 
@@ -59,5 +59,6 @@ To Terry: I need you to check:
 - check data.py， model.py, and train.py under neuralsfc folder? Please note my plan is to do validations on test subset. In model.py, this version aims to work equally to the original repo.
 - check utils/lzw.py. I did some changes here.
 - run each .yml for several epoches (e.g., 3 epoches) to check if the output is as expected. 
+
 
 
