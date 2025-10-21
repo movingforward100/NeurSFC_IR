@@ -29,8 +29,6 @@ output_folder: 'GoPro_LZWL'
 
 large_wg: 'res_gat'
 
-
-n_epochs: 50
 print_interval: 200
 n_epochs: 20
 lr_decay: 0.95
