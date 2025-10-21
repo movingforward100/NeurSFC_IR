@@ -790,7 +790,7 @@ class NeuralSFC:
         weights_avg = weights.mean(axis=0)    ### key operation: average the weights for batch
         assert not np.any(np.isnan(weights)), weights
 
-        avg_sfc = compute_weights_sfc(img255[0], weights_avg, ac_offset_list[0])
+        avg_sfc = compute_weights_sfc(img255[0], weights_avg) # ac_offset_list[0]
         avg_sfc_list = [avg_sfc] * self.cfg.batch_size
 
         if self.multiple_ac_offset and offset is None: # multiple k (ac_offset) are used
@@ -831,7 +831,7 @@ class NeuralSFC:
 
         weights_avg = weights.mean(axis=0)
         assert not np.any(np.isnan(weights)), weights
-        avg_sfc = compute_weights_sfc(img255[0], weights_avg, self.ac_offset_list[0])
+        avg_sfc = compute_weights_sfc(img255[0], weights_avg) #, self.ac_offset_list[0]
         avg_sfc_list = [avg_sfc] * self.cfg.batch_size
 
         # lzw_length_avg = np.mean(self.worker_pool.map(get_lzw_length, zip(img255, avg_sfc_list)))
